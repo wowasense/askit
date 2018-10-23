@@ -1,7 +1,11 @@
-$default-font: "roboto-example", sans-serif;
+$default-font: "lato", sans-serif;
 $accent: orange;
 $text: #333;
-
+// font colors
+$text_white: white;
+$text_dark: #2d2d2d;
+$text_dark_m: #212121;
+$text_blue: #037693;
 // Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
 $grid-gutter-width: 30px;
 $grid-columns: 12;
