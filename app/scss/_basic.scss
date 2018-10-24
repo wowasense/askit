@@ -30,3 +30,11 @@ body {
 b, strong {
 	font-weight: bold;
 }
+
+a{
+	color: $text_white;
+	&:hover {
+		color: $text_white;
+		text-decoration: none;
+	}
+}

@@ -5,17 +5,73 @@
 
 // ≥1200px
 @include media-breakpoint-down(lg) {
-	
+  .header{
+    font-size: 16px;
+  }
+
+  .login{
+    &__img{
+      width: 13px;
+      height: 16px;
+    }
+  }
+
+  .register{
+    &__img{
+      width: 14px;
+      height: 17px;
+    }
+  }
 }
 
 // ≥992px
 @include media-breakpoint-down(md) {
+  .header{
+    font-size: 13px;
+  }
+
+  .login{
+    &__img{
+      width: 11px;
+      height: 12px;
+    }
+  }
+
+  .register{
+    &__img{
+      width: 11px;
+      height: 12px;
+    }
+  }
+
 
 }
 
+
 // ≥768px
 @include media-breakpoint-down(sm) {
-
+  .header{
+    position: relative;
+    &__logo{
+      width: 60px;
+      padding: 20px 0;
+    }
+    &__menu{
+      display: none !important;
+    }
+    &__menu-mobile{
+      display: block;
+      position: absolute;
+      right: 20px;
+      background: url("../img/menu-btn.svg") center center no-repeat;
+      background-size: cover;
+      width: 32px;
+      height: 32px;
+    }
+    &__login-form{
+      display: none !important;
+    }
+  }
 }
 
 // ≥576px
@@ -33,7 +89,6 @@
 
 // ≤768px
 @include media-breakpoint-up(md) {
-
 }
 
 // ≤992px
@@ -43,5 +98,5 @@
 
 // ≤1200px
 @include media-breakpoint-up(xl) {
-	
+
 }

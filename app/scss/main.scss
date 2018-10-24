@@ -6,20 +6,73 @@
 .container-header{
   @extend .container;
   &__header{
-    @extend .row;
+    @extend .row, .justify-content-center, .align-items-center;
   }
 }
 
 .header{
+  background-color: #121011;
+  color: $text_white;
+  font-weight: 200;
+  font-size: 19px;
   &__logo{
-
+    @extend .col-md-1;
   }
-  &__navigation{
-
+  &__menu{
+    @extend .col-md-auto, .d-flex;
+    margin-left: 2.7em;
+    margin-right: 1.8em;
   }
-  &___login-form{
-
+  &__menu_mobile{
+    display: none;
+  }
+  &__login-form{
+    @extend .col-md-auto, .d-flex;
   }
 }
+
+.menu{
+  list-style: none;
+  &__item{
+    padding: 1.8em 0.2em;
+    margin-right: 0.7em;
+    border-top: 2px solid transparent;
+    transition: all 0.1s;
+    &:last-child{
+      margin-right: 0;
+    }
+    &:hover{
+      border-top: 2px solid white;
+      background-color: rgba(#ffffff, 0.1);
+      font-weight: bold;
+    }
+  }
+}
+
+.login{
+  @extend .d-flex, .flex-column, .align-items-center;
+  margin-right: 2em;
+  &__img{
+    width: 16px;
+    height: 17px;
+    margin-bottom: 0.1em;
+  }
+  &__label{
+    font-size: 9px;
+  }
+}
+
+.register{
+  @extend .d-flex, .flex-column, .align-items-center;
+  &__img{
+    width: 15px;
+    height: 17px;
+    margin-bottom: 0.1rem;
+  }
+  &__label{
+    font-size: 9px;
+  }
+}
+
 
 @import "media"; // Always at the end
