@@ -4,7 +4,7 @@
 @import "basic";
 
 .container-header{
-  @extend .container;
+  @extend .container-fluid;
   &__header{
     @extend .row, .justify-content-center, .align-items-center;
   }
@@ -16,11 +16,11 @@
   font-weight: 200;
   font-size: 19px;
   &__logo{
-    @extend .col-md-1;
+    @extend .col-1,.col-md-1;
   }
   &__menu{
     @extend .col-md-auto, .d-flex;
-    margin-left: 2.7em;
+    margin-left: 5em;
     margin-right: 1.8em;
   }
   &__menu_mobile{
@@ -28,6 +28,13 @@
   }
   &__login-form{
     @extend .col-md-auto, .d-flex;
+  }
+}
+
+.logo{
+  &__img{
+    max-width: 60px;
+    padding: 10px 0;
   }
 }
 
@@ -74,5 +81,49 @@
   }
 }
 
+.container-heading{
+  @extend .container-fluid;
+  background: url("../img/heading-img.jpg") center center  no-repeat #577095;
+  background-size: cover;
+  &__heading-page{
+    @extend .row, .justify-content-center;
+    color: $text_white;
+    font-size: 42px;
+  }
+}
 
+.heading-page{
+  &__title-block{
+    @extend .col-md-auto;
+  }
+  &__iphone-block{
+    @extend .col-md-auto;
+  }
+}
+
+.title-block{
+  &__title{
+
+  }
+  &__line{
+    background: url("../img/heading-line.png") no-repeat;
+    width: 208px;
+    height: 5px;
+  }
+  &__text{
+    font-size: 25px;
+  }
+  &__btns{
+
+  }
+}
+
+.iphone-block{
+  &__img{
+    background: url("../img/iPhone.png") center top no-repeat;
+    background-size: cover;
+    width: 280px;
+    height: 360px;
+  }
+}
 @import "media"; // Always at the end

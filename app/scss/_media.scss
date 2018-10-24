@@ -53,7 +53,6 @@
   .header{
     position: relative;
     &__logo{
-      width: 60px;
       padding: 20px 0;
     }
     &__menu{
@@ -70,6 +69,12 @@
     }
     &__login-form{
       display: none !important;
+    }
+  }
+
+  .logo{
+    &__img{
+      width: 60px;
     }
   }
 }
