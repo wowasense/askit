@@ -85,16 +85,19 @@
   @extend .container-fluid;
   background: url("../img/heading-img.jpg") center center  no-repeat #577095;
   background-size: cover;
+  font-size: 42px;
   &__heading-page{
     @extend .row, .justify-content-center;
+    padding-top: 4em;
     color: $text_white;
-    font-size: 42px;
   }
 }
 
 .heading-page{
   &__title-block{
-    @extend .col-md-auto;
+    @extend .col-auto;
+    position: relative;
+    text-align: center;
   }
   &__iphone-block{
     @extend .col-md-auto;
@@ -103,18 +106,48 @@
 
 .title-block{
   &__title{
-
+    line-height: 1;
   }
   &__line{
+    position: absolute;
+    right: 15px;
     background: url("../img/heading-line.png") no-repeat;
+    background-size: contain;
     width: 208px;
     height: 5px;
   }
   &__text{
     font-size: 25px;
+    margin-top: 1em;
   }
   &__btns{
+    @extend .d-flex, .justify-content-center;
+    margin-top: 5em;
+    font-size: 16px;
+  }
+}
 
+.btns{
+  &__create{
+    border: 1px solid white;
+    padding: 0.5em 1em; //em
+    font-weight: 600;
+    margin-right: 2.5em;
+
+  }
+  &__join{
+    @extend .d-flex;
+    &_l{
+      border: 1px solid white;
+      border-right: none;
+      padding: 0.5em 1em; //em
+    }
+    &_r{
+      font-size: 14px;
+      padding: 0.7em 1em; //em
+      background-color: #e8e9ea;
+      color: #037693;
+    }
   }
 }
 
@@ -122,8 +155,10 @@
   &__img{
     background: url("../img/iPhone.png") center top no-repeat;
     background-size: cover;
-    width: 280px;
-    height: 360px;
+    width: 359px;
+    height: 465px;
   }
 }
+
+
 @import "media"; // Always at the end

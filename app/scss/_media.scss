@@ -22,6 +22,13 @@
       height: 17px;
     }
   }
+
+  .iphone-block{
+    &__img{
+      width: 329px;
+      height: 435px;
+    }
+  }
 }
 
 // ≥992px
@@ -44,6 +51,40 @@
     }
   }
 
+  h1, .heading-page{
+    font-size: 30px;
+  }
+
+  .title-block{
+    &__title{
+      line-height: 1;
+    }
+    &__line{
+      right: 18px;
+      width: 148px;
+    }
+    &__text{
+      font-size: 21px;
+    }
+    &__btns{
+      margin-top: 10em;
+      font-size: 12px;
+    }
+  }
+
+  .btns{
+    &__join{
+      &_r{
+        font-size: 11px;
+      }
+    }
+  }
+  .iphone-block{
+    &__img{
+      width: 279px;
+      height: 375px;
+    }
+  }
 
 }
 
@@ -77,6 +118,47 @@
       width: 60px;
     }
   }
+
+  h1, .heading-page{
+    font-size: 21px;
+  }
+
+  .title-block{
+    &__title{
+      line-height: 1;
+    }
+    &__line{
+      width: 110px;
+    }
+    &__text{
+      font-size: 14px;
+    }
+    &__btns{
+      margin: 3em 0;
+      font-size: 12px;
+    }
+  }
+
+  .btns{
+    &__create{
+      padding: 0.5em 0.5em; //em
+    }
+    &__join{
+      &__l{
+        padding: 0.5em 0.5em; //em
+      }
+      &_r{
+        padding: 0.7em 0.5em; //em
+        font-size: 11px;
+      }
+    }
+  }
+  .iphone-block{
+    display: none;
+
+  }
+
+
 }
 
 // ≥576px
