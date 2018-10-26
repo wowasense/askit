@@ -30,6 +30,13 @@
     }
   }
   // /.container-heading
+  .interaction-block{
+    padding-top: 1em;
+  }
+  .title-column{
+    display: none !important;
+  }
+  // /.container-interaction
 }
 
 // ≥992px
@@ -103,6 +110,55 @@
     height: 60px;
   }
   // /.container-howItWorks
+  .interaction-block{
+    font-size: 20px;
+    &__interaction-text{
+      max-width: 430px;
+      margin-right: 5em;
+      text-align: center;
+    }
+    &__interaction-actions{
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  .interaction-text{
+    &__title{
+      width: auto;
+      &_br{
+        display: none;
+      }
+    }
+    &__add-title{
+      display: flex;
+      flex-direction: column;
+      font-size: 24px;
+    }
+    &__text{
+      &_hr{
+        display: none;
+      }
+    }
+  }
+
+  .add-title{
+    &__line{
+      margin: 0 auto;
+    }
+  }
+
+  .interaction-actions{
+    &__img{
+      position: static;
+      margin-top: 0.5em;
+      width: 123px;
+      height: 123px;
+    }
+  }
+  // /.container-interaction
 }
 
 
@@ -112,6 +168,7 @@
     position: relative;
     &__logo{
       padding: 20px 0;
+      max-width: none;
     }
     &__menu{
       display: none !important;
@@ -192,10 +249,50 @@
     width: 50px;
     height: 50px;
   }
-
-  // Доделать чтобы не падали в 3 элемента
   // /.container-howItWorks
+  .interaction-block{
+    flex-direction: column-reverse;
+    justify-content: center;
+    font-size: 14px;
+    &__interaction-text{
+      width: 320px;
+      margin-top: 2em;
+      margin-right: 0em;
+    }
+    &__interaction-actions{
+      display: flex;
+      flex-direction: row;
+      width: auto;
+      height: auto;
+    }
+  }
 
+  .interaction-text{
+    &__title{
+      font-weight: 700;
+    }
+    &__add-title{
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+    }
+    &__text{
+      font-size: 12px;
+      &_hr{
+        display: none;
+      }
+    }
+  }
+
+  .interaction-actions{
+    &__img{
+      margin-top: 0.5em;
+      margin-right: 0.5em;
+      width: 90px;
+      height: 90px;
+    }
+  }
+  // /.container-interaction
 }
 
 // ≥576px

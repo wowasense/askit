@@ -239,4 +239,105 @@
   }
 }
 // /.container-howItWorks
+.container-interaction{
+  @extend .container-fluid;
+  background-color: #037693;
+  &__interaction-page{
+    color: $text_white;
+  }
+}
+
+.title-column{
+  @extend .d-flex, .align-items-center;
+  width: 225px;
+  padding: 1em;
+  border: 1px solid white;
+  transform: rotate(-90deg) translateX(-88px);
+  &__img{
+    background: url("../img/title-column.png") no-repeat;
+    background-size: contain;
+    width: 61px;
+    height: 13px;
+    margin-right: 0.25em;
+  }
+  &__text{
+    line-height: 0;
+    letter-spacing: 0.16em;
+    font-size: 20px;
+    color: $text_white;
+  }
+}
+
+.interaction-block{
+  @extend .row, .justify-content-center, .align-items-center;
+  font-size: 42px;
+  padding-bottom: 1em;
+  &__interaction-text{
+    max-width: 460px;
+  }
+  &__interaction-actions{
+    position: relative;
+    width: 300px;
+    height: 400px;
+  }
+}
+
+.interaction-text{
+  margin-right: 2em;
+  &__title{
+    width: 250px;
+    margin-bottom: 0.2em;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  &__add-title{
+    @extend .d-flex;
+    margin-bottom: 1em;
+    font-size: 21px;
+    font-weight: 500;
+  }
+  &__text{
+    font-size: 13px;
+    font-weight: 200;
+    letter-spacing: (20em/1000);
+    &_hr{
+      visibility: hidden;
+    }
+  }
+}
+
+.add-title{
+  &__text{
+    margin-right: 0.2em;
+  }
+  &__line{
+    width: 7em;
+    margin-bottom: 0.3em;
+    border-bottom: 1px solid white;
+  }
+}
+
+.interaction-actions{
+  &__img{
+    position: absolute;
+    width: 192px;
+    height: 192px;
+    &_ask{
+      background: url("../img/action-ask.png") no-repeat;
+      background-size: cover;
+    }
+    &_choose{
+      top: 100px;
+      left: 100px;
+      background: url("../img/action-choose.png") no-repeat;
+      background-size: cover;
+    }
+    &_select{
+      bottom: 10px;
+      background: url("../img/action-select.png") no-repeat;
+      background-size: cover;
+    }
+  }
+}
+// /.container-interaction
 @import "media"; // Always at the end
