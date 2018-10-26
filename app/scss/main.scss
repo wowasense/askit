@@ -147,7 +147,7 @@
       font-size: 14px;
       padding: 0.7em 1em; //em
       background-color: #e8e9ea;
-      color: #037693;
+      color: $text_blue;
     }
   }
 }
@@ -193,7 +193,7 @@
     width: 200px;
     font-size: 18px;
     line-height: 1;
-    color: #037693;
+    color: $text_blue;
   }
 }
 
@@ -204,7 +204,7 @@
     width: 81px;
     height: 81px;
     &_filled{
-      background-color: #037693;
+      background-color: $text_blue;
     }
   }
   &__title{
@@ -241,7 +241,7 @@
 // /.container-howItWorks
 .container-interaction{
   @extend .container-fluid;
-  background-color: #037693;
+  background-color: $text_blue;
   &__interaction-page{
     color: $text_white;
   }
@@ -340,4 +340,56 @@
   }
 }
 // /.container-interaction
+.container-features{
+  @extend .container-fluid;
+  &__features-page{
+    @extend .row, .justify-content-center;
+    font-size: 42px;
+    padding: 2em 0;
+  }
+}
+
+.features-page{
+  &__title-section{
+
+  }
+  &__features-block{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    font-size: 21px;
+    font-weight: 700;
+    color: $text_blue;
+  }
+}
+
+.feature{
+  border: 1px solid $text_blue;
+  &__img{
+    width: 50px;
+    height: 50px;
+    &_mic{
+      background: url("../img/microphone.png") no-repeat;
+    }
+    &_chart{
+      background: url("../img/bar-chart.png") no-repeat;
+    }
+    &_insight{
+      background: url("../img/insight.png") no-repeat;
+    }
+    &_medal{
+      background: url("../img/medal.png") no-repeat;
+    }
+    &_flag{
+      background: url("../img/flag.png") no-repeat;
+    }
+    &_padlock{
+      background: url("../img/padlock.png") no-repeat;
+    }
+  }
+  &__text{
+
+  }
+}
+// /.container-features
 @import "media"; // Always at the end
