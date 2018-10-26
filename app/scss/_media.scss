@@ -22,13 +22,14 @@
       height: 17px;
     }
   }
-
+  // /.container-header
   .iphone-block{
     &__img{
       width: 329px;
       height: 435px;
     }
   }
+  // /.container-heading
 }
 
 // ≥992px
@@ -50,7 +51,7 @@
       height: 12px;
     }
   }
-
+  // /.container-header
   h1, .heading-page{
     font-size: 30px;
   }
@@ -85,7 +86,23 @@
       height: 375px;
     }
   }
-
+  // /.container-heading
+  h2, .container-howItWorks{
+    font-size: 28px;
+  }
+  .title-section__line{
+      @include section-line(left, md);
+  }
+  .actions-block__action{
+      width: 135px;
+      font-size: 12px;
+      color: #037693;
+    }
+  .action__img{
+    width: 60px;
+    height: 60px;
+  }
+  // /.container-howItWorks
 }
 
 
@@ -118,7 +135,7 @@
       width: 60px;
     }
   }
-
+  // /.container-header
   h1, .heading-page{
     font-size: 21px;
   }
@@ -155,9 +172,29 @@
   }
   .iphone-block{
     display: none;
-
+  }
+  // /.container-heading
+  h2, .container-howItWorks{
+    font-size: 24px;
+  }
+  .title-section__line{
+      @include section-line(left, sm);
+  }
+  .actions-block{
+    width: 320px;
+  }
+  .actions-block__action{
+      width: 110px;
+      font-size: 10px;
+      color: #037693;
+    }
+  .action__img{
+    width: 50px;
+    height: 50px;
   }
 
+  // Доделать чтобы не падали в 3 элемента
+  // /.container-howItWorks
 
 }
 

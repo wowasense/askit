@@ -1,0 +1,22 @@
+@mixin section-line($side: left, $size: lg, $white: none){
+  position: absolute;
+  @if $side == left {
+    left: 2px;
+  } @else if $side == right {
+    right: 23px;
+    transform: rotate(180deg);
+  }
+  background: url("../img/section-line.png") no-repeat;
+  @if $white == white {
+    background: url("../img/section-line-w.png") no-repeat;
+  }
+  background-size: contain;
+  @if $size == lg {
+    width: 64px;
+  } @else if $size == md {
+    width: 44px;
+  }  @else if $size == sm {
+    width: 38px;
+  }
+  height: 3px;
+}

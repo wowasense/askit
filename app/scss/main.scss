@@ -3,13 +3,14 @@
 @import "libs";
 @import "basic";
 
+@import "_mixins/section-line";
+
 .container-header{
   @extend .container-fluid;
   &__header{
     @extend .row, .justify-content-center, .align-items-center;
   }
 }
-
 .header{
   background-color: #121011;
   color: $text_white;
@@ -80,7 +81,7 @@
     font-size: 9px;
   }
 }
-
+// /.container-header
 .container-heading{
   @extend .container-fluid;
   background: url("../img/heading-img.jpg") center center  no-repeat #577095;
@@ -122,7 +123,7 @@
   }
   &__btns{
     @extend .d-flex, .justify-content-center;
-    margin-top: 5em;
+    margin-top: 7em;
     font-size: 16px;
   }
 }
@@ -159,6 +160,83 @@
     height: 465px;
   }
 }
+// /.container-heading
+.container-howItWorks{
+  @extend .container-fluid;
+  font-size: 42px;
+  &__howItWorks-page{
+    @extend .d-flex, .flex-column, .align-items-center;
+    padding-top: 2em;
+    padding-bottom: 1.5em;
+  }
+}
 
+.title-section{
 
+  position: relative;
+  &__title{
+
+  }
+  &__line{
+    @include section-line();
+  }
+}
+
+.actions-block{
+  @extend .row, .justify-content-center;
+  margin-top: 1.5em;
+  &__action{
+    @extend .d-flex, .flex-column, .align-items-center;
+    margin-right: 2em;
+    margin-bottom: 1em;
+    text-align: center;
+    width: 200px;
+    font-size: 18px;
+    line-height: 1;
+    color: #037693;
+  }
+}
+
+.action{
+  &__img{
+    border: 1px solid #88bfcc;
+    padding: 1em;
+    width: 81px;
+    height: 81px;
+    &_filled{
+      background-color: #037693;
+    }
+  }
+  &__title{
+    margin-top: 1em;
+    &_up{
+      text-transform: uppercase;
+    }
+  }
+}
+
+@mixin action-icon($name) {
+  background: url("../img/action-#{$name}.png") center center no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.img{
+  &__icon{
+    &-phone{
+      @include action-icon(phone);
+    }
+    &-discuss{
+      @include action-icon(discuss);
+    }
+    &-qr{
+      @include action-icon(qr);
+    }
+    &-favorites{
+      @include action-icon(favorites);
+    }
+  }
+}
+// /.container-howItWorks
 @import "media"; // Always at the end
