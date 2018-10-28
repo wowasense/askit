@@ -343,7 +343,7 @@
 .container-features{
   @extend .container-fluid;
   &__features-page{
-    @extend .row, .justify-content-center;
+    @extend .row, .flex-column, .align-items-center;
     font-size: 42px;
     padding: 2em 0;
   }
@@ -354,41 +354,104 @@
 
   }
   &__features-block{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
+    display: table;
+    margin-top: 2em;
+    position: relative;
+    border-collapse: collapse;
     font-size: 21px;
     font-weight: 700;
     color: $text_blue;
+    &:before{
+      content: "";
+      position: absolute;
+      top: 112px;
+      left: 248px;
+      width: 2.4em;
+      height: 2.4em;
+      background: white;
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      top: 112px;
+      left: 520px;
+      width: 2.4em;
+      height: 2.4em;
+      background: white;
+    }
   }
 }
 
+
+
+.features-block_m{
+  display: none;
+}
+
+.feature-tr{
+  display: table-row;
+}
+
+.feature-tr:first-child .feature{
+  border-top: none;
+}
+
+.feature-tr:last-child .feature{
+  border-bottom: none;
+}
+
+.feature-tr .feature:first-child{
+  border-left: none;
+}
+
+.feature-tr .feature:last-child{
+  border-right: none;
+}
+
 .feature{
+  display: table-cell;
+  padding: 1em 3em;
   border: 1px solid $text_blue;
+  text-align: center;
   &__img{
-    width: 50px;
-    height: 50px;
+    margin: 0 auto;
+    padding-bottom: 3em;
     &_mic{
       background: url("../img/microphone.png") no-repeat;
+      background-size: contain;
+      width: 23px;
+      height: 44px;
     }
     &_chart{
       background: url("../img/bar-chart.png") no-repeat;
+      background-size: contain;
+      width: 40px;
+      height: 36px;
     }
     &_insight{
       background: url("../img/insight.png") no-repeat;
+      background-size: contain;
+      width: 42px;
+      height: 34px;
     }
     &_medal{
       background: url("../img/medal.png") no-repeat;
+      background-size: contain;
+      width: 34px;
+      height: 36px;
     }
     &_flag{
       background: url("../img/flag.png") no-repeat;
+      background-size: contain;
+      width: 32px;
+      height: 40px;
     }
     &_padlock{
       background: url("../img/padlock.png") no-repeat;
+      background-size: contain;
+      width: 31px;
+      height: 37px;
     }
-  }
-  &__text{
-
   }
 }
 // /.container-features
