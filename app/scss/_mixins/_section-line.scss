@@ -3,7 +3,7 @@
   @if $side == left {
     left: 2px;
   } @else if $side == right {
-    right: 23px;
+    right: 5px;
     transform: rotate(180deg);
   }
   background: url("../img/section-line.png") no-repeat;
