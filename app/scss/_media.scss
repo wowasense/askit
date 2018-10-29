@@ -255,6 +255,27 @@
     }
   }
   // /.container-partners
+  .container-events{
+    &__events-page{
+      padding-top: 1.8em;
+      padding-bottom: 3em;
+    }
+  }
+
+  .events-block{
+    &__event{
+      &_external{
+        transform: translateX(75px) scale(0.72);
+      }
+      &_interactive{
+        transform: scale(0.77);
+      }
+      &_internal{
+        transform: translateX(-75px) scale(0.72);
+      }
+    }
+  }
+  // /.container-events
 }
 
 
@@ -460,6 +481,104 @@
     }
   }
   // /.container-partners
+
+  .container-events{
+    &__events-page{
+      display: none;
+      &-m{
+        display: block;
+      }
+    }
+  }
+
+  .title-section__title-m{
+    display: none;
+  }
+
+  .event-m{
+    padding: 0.5em 0;
+    margin-bottom: 0.1em;
+    color: $text_white;
+    font-size: 30px;
+    text-align: center;
+    &__title-m{
+      font-weight: 200;
+      text-transform: uppercase;
+      &_b{
+        font-size: 34px;
+        font-weight: 700;
+      }
+    }
+    &__wrapper{
+      display: flex;
+      justify-content: center;
+        margin-top: 1em;
+    }
+    &__text-m{
+      width: 260px;
+      font-size: 14px;
+      font-weight: 200;
+    }
+    &__btn-m{
+      padding: 0.25em 1em;
+      margin-top: 2em;
+      font-size: 15px;
+      font-weight: 500;
+      background-color: white;
+      border-radius: 50px;
+    }
+  }
+
+  .events-block-m{
+    &__event-m{
+      &_external-m{
+        background: url("../img/events-external-m.jpg") center center no-repeat;
+        background-size: cover;
+        .event-m{
+          &__icon-m{
+            background: url("../img/usb-connection.png") no-repeat;
+            background-size: contain;
+            width: 38px;
+            height: 57px;
+          }
+          &__btn-m{
+            color: #499086;
+          }
+        }
+      }
+      &_interactive-m{
+        background: url("../img/events-interactive-m.jpg") center center no-repeat;
+        background-size: cover;
+        .event-m{
+          &__icon-m{
+            background: url("../img/interactivity.png") no-repeat;
+            background-size: contain;
+            width: 42px;
+            height: 57px;
+          }
+          &__btn-m{
+            color: #d9665c;
+          }
+        }
+      }
+      &_internal-m{
+        background: url("../img/events-internal-m.jpg") center center no-repeat;
+        background-size: cover;
+        .event-m{
+          &__icon-m{
+            background: url("../img/hard-disk.png") no-repeat;
+            background-size: contain;
+            width: 42px;
+            height: 57px;
+          }
+          &__btn-m{
+            color: #cc8f55;
+          }
+        }
+      }
+    }
+  }
+  // /.container-events
 }
 
 // ≥576px

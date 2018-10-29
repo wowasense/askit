@@ -508,6 +508,124 @@
     max-width: 98px;
   }
 }
-
 // /.container-partners
+.container-events{
+  @extend .container-fluid;
+  background-color: #e8e8e8;
+  &__events-page{
+    @extend .row, .flex-column, .align-items-center;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    font-size: 42px;
+    &-m{
+      display: none;
+    }
+  }
+}
+
+.event{
+  @extend .d-flex, .flex-column, .align-items-center;
+  margin-top: 1em;
+  padding-bottom: 0.5em;
+  width: 330px;
+  background-color: white;
+  font-size: 44px;
+  text-align: center;
+  &__title{
+    padding-top: 0.5em;
+    padding-bottom: 0.8em;
+    margin-bottom: 0.2em;
+    color: $text_white;
+    font-weight: 200;
+    line-height: 1.2;
+    text-transform: uppercase;
+    &_b{
+      font-size: 50px;
+      font-weight: 700;
+    }
+  }
+  &__text{
+    margin-top: 0.5em;
+    width: 245px;
+    color: black;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: (20em/1000);
+    line-height: 1.3;
+  }
+  &__btn{
+    padding: 0.07em 1.1em;
+    margin-top: 0.5em;
+    font-size: 19px;
+    font-weight: 500;
+    border-radius: 50px;
+  }
+}
+
+.events-block{
+  @extend .d-flex;
+  &__event{
+    &_external{
+      transform: translate(50px, 5px) scale(0.85);
+      box-shadow: -2px 6px 5px -5px rgba(0, 0, 0, 0.35);
+      .event{
+        &__title{
+          background: url("../img/events-external.jpg") center center no-repeat;
+          background-size: cover;
+        }
+        &__icon{
+          background: url("../img/usb-connection-c.png") no-repeat;
+          background-size: contain;
+          width: 38px;
+          height: 57px;
+        }
+        &__btn{
+          background-color: #4ca59a;
+        }
+      }
+
+    }
+    &_interactive{
+      z-index: 1;
+      box-shadow: 0 0 2em 0.01em rgba(0, 0, 0, 0.26);
+      .event{
+        &__title{
+          background: url("../img/events-interactive.jpg") center center no-repeat;
+          background-size: cover;
+        }
+        &__icon{
+          background: url("../img/interactivity-c.png") no-repeat;
+          background-size: contain;
+          width: 42px;
+          height: 57px;
+        }
+        &__btn{
+          background-color: #f26250;
+        }
+      }
+
+    }
+    &_internal{
+      transform: translate(-50px, 5px) scale(0.85);
+      box-shadow: 2px 6px 5px -5px rgba(0, 0, 0, 0.35);
+      .event{
+        &__title{
+          background: url("../img/events-internal.jpg") center center no-repeat;
+          background-size: cover;
+        }
+        &__icon{
+          background: url("../img/hard-disk-c.png") no-repeat;
+          background-size: contain;
+          width: 42px;
+          height: 57px;
+        }
+        &__btn{
+          background-color: #f0a765;
+        }
+      }
+
+    }
+  }
+}
+// /.container-events
 @import "media"; // Always at the end
