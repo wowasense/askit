@@ -4,7 +4,7 @@
 @import "basic";
 
 @import "_mixins/section-line";
-
+@import "_mixins/styles-block";
 .container-header{
   @extend .container-fluid;
   &__header{
@@ -897,4 +897,127 @@
   }
 }
 // /.container-aboutUs
+.container-footer{
+  @extend .container-fluid;
+  background-color: #0d0d0d;
+  &__footer{
+    @extend .row, .flex-column, .align-items-center;
+    padding-top: 2em;
+    padding-bottom: 0.5em;
+    font-size: 25px;
+  }
+}
+
+.footer{
+  font-weight: 200;
+  color: $text_white;
+  &__wrapper{
+    @extend .d-flex, .align-items-center;
+    margin-bottom: 4em;
+  }
+  &__company-block{
+    width: 250px;
+    text-align: center;
+    font-size: 13px;
+    margin-right: 10em;
+    .company-block__logo{
+      margin: 0 auto;
+      margin-bottom: 2.5em;
+      background: url("../img/logo-bw.png") no-repeat;
+      background-size: contain;
+      width: 70px;
+      height: 85px;
+    }
+    .company-block__text{
+      letter-spacing: (20em/1000);
+      line-height: 1.2;
+    }
+  }
+  &__inner{
+    @extend .d-flex, .align-items-start;
+  }
+  &__links-block{
+    @extend .d-flex, .flex-column;
+    margin-right: 3em;
+  }
+  &__account-block{
+    @extend .d-flex, .flex-column;
+    margin-right: 3em;
+  }
+  &__contact{
+    @extend .d-flex, .flex-column;
+  }
+  &__copyright{
+    font-size: 14px;
+  }
+}
+
+
+.links-block{
+  @include styles-block(links);
+}
+
+.account-block{
+  @include styles-block(account-actions);
+}
+
+.contact{
+  font-size: 14px;
+  text-align: center;
+  &__title{
+    font-weight: 400;
+    margin-bottom: 1.5em;
+  }
+  &__social-icons{
+    @extend .d-flex, .justify-content-around;
+    margin-bottom: 1.5em;
+    .social-icon{
+      width: 16px;
+      height: 16px;
+    }
+    .social-icons__social-icon{
+      &_tw{
+        background: url("../img/tw.png") no-repeat;
+        background-size: contain;
+      }
+      &_pinterest{
+        background: url("../img/pinterest.png") no-repeat;
+        background-size: contain;
+      }
+      &_linkedin{
+        background: url("../img/linkedin.png") no-repeat;
+        background-size: contain;
+      }
+      &_fb{
+        background: url("../img/fb.png") no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+  &__subscribe-title{
+    margin-bottom: 1.5em;
+    font-size: 12px;
+    font-weight: 200;
+  }
+  &__enter-email{
+    border-bottom: 1px solid white;
+  }
+  &__input-email{
+    color: rgba(#ede3d3, 0.5);
+    font-size: 11px;
+    margin-left: 5em;
+    width: 10em;
+    background-color: transparent;
+    border: none;
+  }
+  &__submit-email{
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    background: url("../img/email-icon.png") center center no-repeat;
+    background-size: contain;
+    border: none;
+  }
+}
+// /.container-footer
 @import "media"; // Always at the end

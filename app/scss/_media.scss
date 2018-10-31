@@ -343,6 +343,96 @@
     }
   }
   // /.container-aboutUs
+  .container-footer{
+    background-color: #0d0d0d;
+    &__footer{
+    //  @extend .row, .flex-column, .align-items-center;
+      padding-top: 3em;
+      padding-bottom: 1em;
+      font-size: 25px;
+    }
+  }
+
+  .footer{
+    font-weight: 200;
+    color: $text_white;
+    &__wrapper{
+      flex-direction: column;
+      margin-bottom: 4em;
+    }
+    &__company-block{
+      width: 610px;
+      text-align: center;
+      font-size: 32px;
+      margin-right: 0;
+      margin-bottom: 2em;
+      .company-block__logo{
+        margin-bottom: 1.5em;
+        width: 111px;
+        height: 133px;
+      }
+    }
+    &__inner{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__links-block{
+      margin-right: 9em;
+
+    }
+    &__account-block{
+      margin-right: 0em;
+    }
+
+    &__copyright{
+      padding-top: 2em;
+      font-size: 29px;
+    }
+  }
+
+  .links-block{
+    &__title{
+        font-size: 30px;
+        margin-bottom: 1em;
+    }
+    &__links{
+      font-size: 24px;
+    }
+  }
+
+  .account-block{
+    &__title{
+        font-size: 30px;
+        margin-bottom: 1em;
+    }
+    &__account-actions{
+      font-size: 24px;
+    }
+  }
+
+  .contact{
+    padding-top: 1em;
+    font-size: 40px;
+    &__social-icons{
+      .social-icon{
+        width: 47px;
+        height: 47px;
+      }
+    }
+    &__subscribe-title{
+      font-size: 32px;
+    }
+    &__input-email{
+      color: rgba(#ede3d3, 0.5);
+      font-size: 32px;
+      font-weight: 200;
+    }
+    &__submit-email{
+      width: 50px;
+      height: 30px;
+    }
+  }
+  // /.container-footer
 }
 
 
@@ -706,6 +796,95 @@
     }
   }
   // /.container-aboutUs
+  .container-footer{
+    background-color: #0d0d0d;
+    &__footer{
+      padding-top: 3em;
+      padding-bottom: 1em;
+      font-size: 16px;
+    }
+  }
+
+  .footer{
+    font-weight: 200;
+    color: $text_white;
+    &__wrapper{
+      flex-direction: column;
+      margin-bottom: 4em;
+    }
+    &__company-block{
+      width: 310px;
+      text-align: center;
+      font-size: 16px;
+      margin-right: 0;
+      margin-bottom: 2em;
+      .company-block__logo{
+        margin-bottom: 1.5em;
+        width: 54px;
+        height: 65px;
+      }
+    }
+    &__inner{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__links-block{
+      display: none !important;
+
+    }
+    &__account-block{
+      display: none !important;
+    }
+
+    &__copyright{
+      padding-top: 2em;
+      font-size: 14px;
+    }
+  }
+
+  .links-block{
+    &__title{
+        font-size: 30px;
+        margin-bottom: 1em;
+    }
+    &__links{
+      font-size: 24px;
+    }
+  }
+
+  .account-block{
+    &__title{
+        font-size: 30px;
+        margin-bottom: 1em;
+    }
+    &__account-actions{
+      font-size: 24px;
+    }
+  }
+
+  .contact{
+    padding-top: 1em;
+    font-size: 20px;
+    &__social-icons{
+      .social-icon{
+        width: 23px;
+        height: 23px;
+      }
+    }
+    &__subscribe-title{
+      font-size: 16px;
+    }
+    &__input-email{
+      color: rgba(#ede3d3, 0.5);
+      font-size: 16px;
+      font-weight: 200;
+    }
+    &__submit-email{
+      width: 27px;
+      height: 18px;
+    }
+  }
+  // /.container-footer
 }
 
 // ≥576px

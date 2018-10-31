@@ -1,0 +1,13 @@
+@mixin styles-block($element){
+    &__title{
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 2em;
+    }
+    &__#{$element}{
+      display: flex;
+      flex-direction: column;
+      font-size: 12px;
+      line-height: 1.3;
+    }
+}
